@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Model.FineModel>
+<h3 class="text-center">Fine List</h3>
+<table class="table border border-dark">
+    
+    <tr>
+
+        <th>
+            Designation
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+
+        <th>
+           Level
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DesignationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrganizationLevelName)
+            </td>
+
+        </tr>
+    }
+
+</table>

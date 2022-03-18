@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Model.MembershipFeeModel>
+
+<h4 class="text-center">Fee List</h4>
+<table class="table border border-dark">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.DesignationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            Level
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesignationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganizationLevelName)
+        </td>
+       
+    </tr>
+}
+</table>

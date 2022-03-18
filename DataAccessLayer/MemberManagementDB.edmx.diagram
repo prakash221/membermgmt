@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="70ab589c9979496f9a835870a0fbaa48" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="MemberMSModel.Achievement" Width="1.5" PointX="14.5" PointY="14.5" />
+        <EntityTypeShape EntityType="MemberMSModel.Award" Width="1.5" PointX="14.5" PointY="17.875" />
+        <EntityTypeShape EntityType="MemberMSModel.Branch" Width="1.5" PointX="10" PointY="10.5" />
+        <EntityTypeShape EntityType="MemberMSModel.Designation" Width="1.5" PointX="12.25" PointY="9.75" />
+        <EntityTypeShape EntityType="MemberMSModel.DesignationType" Width="1.5" PointX="14.5" PointY="10.25" />
+        <EntityTypeShape EntityType="MemberMSModel.Donation" Width="1.5" PointX="10" PointY="13.875" />
+        <EntityTypeShape EntityType="MemberMSModel.DonationsType" Width="1.5" PointX="8.125" PointY="14.625" />
+        <EntityTypeShape EntityType="MemberMSModel.Donor" Width="1.5" PointX="8" PointY="11.75" />
+        <EntityTypeShape EntityType="MemberMSModel.Fine" Width="1.5" PointX="14.5" PointY="7.625" />
+        <EntityTypeShape EntityType="MemberMSModel.Member" Width="1.5" PointX="12.25" PointY="12.875" />
+        <EntityTypeShape EntityType="MemberMSModel.MembershipFee" Width="1.5" PointX="7.875" PointY="8.875" />
+        <EntityTypeShape EntityType="MemberMSModel.Occupation" Width="1.5" PointX="14.5" PointY="12.375" />
+        <EntityTypeShape EntityType="MemberMSModel.OrganizationLevel" Width="1.5" PointX="10" PointY="7.75" />
+        <EntityTypeShape EntityType="MemberMSModel.OrganizationSchema" Width="1.5" PointX="14.625" PointY="5.375" />
+        <EntityTypeShape EntityType="MemberMSModel.Transaction" Width="1.5" PointX="8.125" PointY="17" />
+        <EntityTypeShape EntityType="MemberMSModel.TransactionType" Width="1.5" PointX="10.25" PointY="17.625" />
+        <EntityTypeShape EntityType="MemberMSModel.User" Width="1.5" PointX="12.5" PointY="17.375" />
+        <AssociationConnector Association="MemberMSModel.FK__Achieveme__Award__30F848ED" />
+        <AssociationConnector Association="MemberMSModel.FK__Achieveme__Membe__31EC6D26" />
+        <AssociationConnector Association="MemberMSModel.FK_Branches_OrganizationLevel" />
+        <AssociationConnector Association="MemberMSModel.FK_Member_Branches" />
+        <AssociationConnector Association="MemberMSModel.FK__Fine__Designation" />
+        <AssociationConnector Association="MemberMSModel.FK__Member__Designat__15502E78" />
+        <AssociationConnector Association="MemberMSModel.FK__Membershi__Designation" />
+        <AssociationConnector Association="MemberMSModel.FK_MemberPost_DesignationType" />
+        <AssociationConnector Association="MemberMSModel.FK_Donations_DonationsTypes" />
+        <AssociationConnector Association="MemberMSModel.FK_Donations_DonorIndividual" />
+        <AssociationConnector Association="MemberMSModel.FK_Donations_Member" />
+        <AssociationConnector Association="MemberMSModel.FK_Transactions_DonorIndividual" />
+        <AssociationConnector Association="MemberMSModel.FK_Fine_OrganizationLevel" />
+        <AssociationConnector Association="MemberMSModel.FK_Member_Occupation" />
+        <AssociationConnector Association="MemberMSModel.FK_Transactions_Member" />
+        <AssociationConnector Association="MemberMSModel.FK_Users_Member" />
+        <AssociationConnector Association="MemberMSModel.FK_MembershipFee_OrganizationLevel" />
+        <AssociationConnector Association="MemberMSModel.FK_Transactions_TransactionTypes" />
+        <EntityTypeShape EntityType="MemberMSModel.sysdiagram" Width="1.5" PointX="6.375" PointY="0.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

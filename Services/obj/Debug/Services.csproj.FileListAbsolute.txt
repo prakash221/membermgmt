@@ -1,0 +1,36 @@
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\Services.dll.config
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\Services.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\Services.pdb
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\DataAccessLayer.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\EntityFramework.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\Model.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\DataAccessLayer.pdb
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\DataAccessLayer.dll.config
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\Model.pdb
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\Model.dll.config
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\EntityFramework.xml
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\obj\Debug\Services.csprojAssemblyReference.cache
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\obj\Debug\Services.csproj.CopyComplete
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\obj\Debug\Services.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\Services\obj\Debug\Services.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\obj\Debug\Services.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\obj\Debug\Services.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\Services.dll.config
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\Services.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\Services.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\DataAccessLayer.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\EntityFramework.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\Model.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\DataAccessLayer.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\Model.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\Model.dll.config
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\EntityFramework.xml
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\Services\obj\Debug\Services.csproj.CopyComplete

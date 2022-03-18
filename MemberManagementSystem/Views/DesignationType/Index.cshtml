@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Model.DesignationTypeModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="pl-3">List of Designation Type </h2>
+<div class="border-top border-dark my-1"></div>
+<p class="pl-5 pt-2">
+    @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.DesignationTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesinationTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.DesignationTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesinationTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.DesignationTypeID }, new { @class = "btn btn-success" })
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.DesignationTypeID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+    }
+
+</table>

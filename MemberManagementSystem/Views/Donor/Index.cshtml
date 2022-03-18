@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Model.DonorModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="pl-3">List of Donor </h2>
+<div class="border-top border-dark my-1"></div>
+<p class="pl-5 pt-2">
+    @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.DonorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.DonorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DonorID }, new { @class = "btn btn-success" })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.DonorID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Model.MemberModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="pl-3">List of Member </h2>
+<div class="border-top border-dark my-1"></div>
+<p class="pl-5 pt-2">
+    @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.MemberID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.DesignationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesignationName)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.OccupationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OccuptionName)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.BranchID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchName)
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.MemberID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.DesignationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesignationName)
+        </td>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.OccupationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OccuptionName)
+        </td>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.BranchID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MemberID }, new { @class = "btn btn-success" })
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.MemberID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+    }
+
+</table>

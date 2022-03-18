@@ -1,0 +1,24 @@
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\4thsemester\databasemanagementsystemfile\shivasir\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Prakash\Desktop\Desktop 2020 late\Assignment\4th\Database\Lions CLub\MemberManagementSystem\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Model.DonationModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="pl-3">List of Donation </h2>
+<div class="border-top border-dark my-1"></div>
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DonationTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.DonationTypeName)
+    </td>
+    <th>
+        @Html.DisplayFor(modelItem => item.DonationDescription)
+    </th>
+    <th>
+        @Html.DisplayFor(modelItem => item.DonationFrom)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.DonorName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Remarks)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.DonationID }, new { @class = "btn btn-success" })
+    </td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = item.DonationID }, new { @class = "btn btn-danger" })
+    </td>
+</tr>
+    }
+
+</table>
+<p class="pl-5 pt-2">
+    @Html.ActionLink("Donation Entry", "Create", null, new { @class = "btn btn-primary" })
+</p>

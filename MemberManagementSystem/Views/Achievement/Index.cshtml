@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Model.AchievementModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="pl-3">List of Achievement </h2>
+<div class="border-top border-dark my-1"></div>
+<p class="pl-5 pt-2">
+    @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.AchievementID)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.MemberID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.AwardId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AwardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchieveDate)
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.AchievementID)
+            </td>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.MemberID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td class="d-none">
+                @Html.DisplayFor(modelItem => item.AwardId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AchieveDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AchievementID }, new { @class = "btn btn-success" })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.AchievementID }, new { @class = "btn btn-danger" })
+            </td>
+
+        </tr>
+    }
+
+</table>

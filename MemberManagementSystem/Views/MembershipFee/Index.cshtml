@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Model.MembershipFeeModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="pl-3">List of Membership Fee </h2>
+<div class="border-top border-dark my-1"></div>
+<p class="pl-5 pt-2">
+    @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.MemberShipFeeID)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.DesignationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesignationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th class="d-none">
+            @Html.DisplayNameFor(model => model.OrganizationLevelID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizationLevelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.MemberShipFeeID)
+        </td>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.DesignationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesignationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td class="d-none">
+            @Html.DisplayFor(modelItem => item.OrganizationLevelID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganizationLevelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MemberShipFeeID }, new { @class = "btn btn-success" })
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.MemberShipFeeID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+    }
+
+</table>

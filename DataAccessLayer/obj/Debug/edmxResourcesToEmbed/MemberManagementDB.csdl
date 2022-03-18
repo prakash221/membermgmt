@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MemberMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MemberMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Achievements" EntityType="MemberMSModel.Achievement" />
+    <EntitySet Name="Awards" EntityType="MemberMSModel.Award" />
+    <EntitySet Name="Branches" EntityType="MemberMSModel.Branch" />
+    <EntitySet Name="Designations" EntityType="MemberMSModel.Designation" />
+    <EntitySet Name="DesignationTypes" EntityType="MemberMSModel.DesignationType" />
+    <EntitySet Name="Donations" EntityType="MemberMSModel.Donation" />
+    <EntitySet Name="DonationsTypes" EntityType="MemberMSModel.DonationsType" />
+    <EntitySet Name="Donors" EntityType="MemberMSModel.Donor" />
+    <EntitySet Name="Fines" EntityType="MemberMSModel.Fine" />
+    <EntitySet Name="Members" EntityType="MemberMSModel.Member" />
+    <EntitySet Name="MembershipFees" EntityType="MemberMSModel.MembershipFee" />
+    <EntitySet Name="Occupations" EntityType="MemberMSModel.Occupation" />
+    <EntitySet Name="OrganizationLevels" EntityType="MemberMSModel.OrganizationLevel" />
+    <EntitySet Name="OrganizationSchemas" EntityType="MemberMSModel.OrganizationSchema" />
+    <EntitySet Name="Transactions" EntityType="MemberMSModel.Transaction" />
+    <EntitySet Name="TransactionTypes" EntityType="MemberMSModel.TransactionType" />
+    <EntitySet Name="Users" EntityType="MemberMSModel.User" />
+    <AssociationSet Name="FK__Achieveme__Award__30F848ED" Association="MemberMSModel.FK__Achieveme__Award__30F848ED">
+      <End Role="Award" EntitySet="Awards" />
+      <End Role="Achievement" EntitySet="Achievements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Achieveme__Membe__31EC6D26" Association="MemberMSModel.FK__Achieveme__Membe__31EC6D26">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Achievement" EntitySet="Achievements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Branches_OrganizationLevel" Association="MemberMSModel.FK_Branches_OrganizationLevel">
+      <End Role="OrganizationLevel" EntitySet="OrganizationLevels" />
+      <End Role="Branch" EntitySet="Branches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Member_Branches" Association="MemberMSModel.FK_Member_Branches">
+      <End Role="Branch" EntitySet="Branches" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fine__Designation" Association="MemberMSModel.FK__Fine__Designation">
+      <End Role="Designation" EntitySet="Designations" />
+      <End Role="Fine" EntitySet="Fines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Member__Designat__15502E78" Association="MemberMSModel.FK__Member__Designat__15502E78">
+      <End Role="Designation" EntitySet="Designations" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Membershi__Designation" Association="MemberMSModel.FK__Membershi__Designation">
+      <End Role="Designation" EntitySet="Designations" />
+      <End Role="MembershipFee" EntitySet="MembershipFees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberPost_DesignationType" Association="MemberMSModel.FK_MemberPost_DesignationType">
+      <End Role="DesignationType" EntitySet="DesignationTypes" />
+      <End Role="Designation" EntitySet="Designations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Donations_DonationsTypes" Association="MemberMSModel.FK_Donations_DonationsTypes">
+      <End Role="DonationsType" EntitySet="DonationsTypes" />
+      <End Role="Donation" EntitySet="Donations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Donations_DonorIndividual" Association="MemberMSModel.FK_Donations_DonorIndividual">
+      <End Role="Donor" EntitySet="Donors" />
+      <End Role="Donation" EntitySet="Donations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Donations_Member" Association="MemberMSModel.FK_Donations_Member">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Donation" EntitySet="Donations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_DonorIndividual" Association="MemberMSModel.FK_Transactions_DonorIndividual">
+      <End Role="Donor" EntitySet="Donors" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fine_OrganizationLevel" Association="MemberMSModel.FK_Fine_OrganizationLevel">
+      <End Role="OrganizationLevel" EntitySet="OrganizationLevels" />
+      <End Role="Fine" EntitySet="Fines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Member_Occupation" Association="MemberMSModel.FK_Member_Occupation">
+      <End Role="Occupation" EntitySet="Occupations" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_Member" Association="MemberMSModel.FK_Transactions_Member">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Member" Association="MemberMSModel.FK_Users_Member">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembershipFee_OrganizationLevel" Association="MemberMSModel.FK_MembershipFee_OrganizationLevel">
+      <End Role="OrganizationLevel" EntitySet="OrganizationLevels" />
+      <End Role="MembershipFee" EntitySet="MembershipFees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_TransactionTypes" Association="MemberMSModel.FK_Transactions_TransactionTypes">
+      <End Role="TransactionType" EntitySet="TransactionTypes" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="MemberMSModel.sysdiagram" />
+  </EntityContainer>
+  <EntityType Name="Achievement">
+    <Key>
+      <PropertyRef Name="AchievementID" />
+    </Key>
+    <Property Name="AchievementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" />
+    <Property Name="AwardId" Type="Int32" />
+    <Property Name="AchieveDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Award" Relationship="MemberMSModel.FK__Achieveme__Award__30F848ED" FromRole="Achievement" ToRole="Award" />
+    <NavigationProperty Name="Member" Relationship="MemberMSModel.FK__Achieveme__Membe__31EC6D26" FromRole="Achievement" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="AwardID" />
+    </Key>
+    <Property Name="AwardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Achievements" Relationship="MemberMSModel.FK__Achieveme__Award__30F848ED" FromRole="Award" ToRole="Achievement" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Name="BranchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchDistrict" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchProvinceState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BranchEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OrganizationLevelID" Type="Int32" />
+    <NavigationProperty Name="OrganizationLevel" Relationship="MemberMSModel.FK_Branches_OrganizationLevel" FromRole="Branch" ToRole="OrganizationLevel" />
+    <NavigationProperty Name="Members" Relationship="MemberMSModel.FK_Member_Branches" FromRole="Branch" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesignationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DesignationTypeID" Type="Int32" />
+    <NavigationProperty Name="Fines" Relationship="MemberMSModel.FK__Fine__Designation" FromRole="Designation" ToRole="Fine" />
+    <NavigationProperty Name="Members" Relationship="MemberMSModel.FK__Member__Designat__15502E78" FromRole="Designation" ToRole="Member" />
+    <NavigationProperty Name="MembershipFees" Relationship="MemberMSModel.FK__Membershi__Designation" FromRole="Designation" ToRole="MembershipFee" />
+    <NavigationProperty Name="DesignationType" Relationship="MemberMSModel.FK_MemberPost_DesignationType" FromRole="Designation" ToRole="DesignationType" />
+  </EntityType>
+  <EntityType Name="DesignationType">
+    <Key>
+      <PropertyRef Name="DesignationTypeID" />
+    </Key>
+    <Property Name="DesignationTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesinationTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Designations" Relationship="MemberMSModel.FK_MemberPost_DesignationType" FromRole="DesignationType" ToRole="Designation" />
+  </EntityType>
+  <EntityType Name="Donation">
+    <Key>
+      <PropertyRef Name="DonationID" />
+    </Key>
+    <Property Name="DonationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DonationTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DonorID" Type="Int32" />
+    <Property Name="MemberID" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DonationFrom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DonationDescription" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DonationsType" Relationship="MemberMSModel.FK_Donations_DonationsTypes" FromRole="Donation" ToRole="DonationsType" />
+    <NavigationProperty Name="Donor" Relationship="MemberMSModel.FK_Donations_DonorIndividual" FromRole="Donation" ToRole="Donor" />
+    <NavigationProperty Name="Member" Relationship="MemberMSModel.FK_Donations_Member" FromRole="Donation" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="DonationsType">
+    <Key>
+      <PropertyRef Name="DonationTypeID" />
+    </Key>
+    <Property Name="DonationTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DonationTypeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Donations" Relationship="MemberMSModel.FK_Donations_DonationsTypes" FromRole="DonationsType" ToRole="Donation" />
+  </EntityType>
+  <EntityType Name="Donor">
+    <Key>
+      <PropertyRef Name="DonorID" />
+    </Key>
+    <Property Name="DonorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DonorName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Donations" Relationship="MemberMSModel.FK_Donations_DonorIndividual" FromRole="Donor" ToRole="Donation" />
+    <NavigationProperty Name="Transactions" Relationship="MemberMSModel.FK_Transactions_DonorIndividual" FromRole="Donor" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="Fine">
+    <Key>
+      <PropertyRef Name="FineID" />
+    </Key>
+    <Property Name="FineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesignationID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="OrganizationLevelID" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Designation" Relationship="MemberMSModel.FK__Fine__Designation" FromRole="Fine" ToRole="Designation" />
+    <NavigationProperty Name="OrganizationLevel" Relationship="MemberMSModel.FK_Fine_OrganizationLevel" FromRole="Fine" ToRole="OrganizationLevel" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DesignationId" Type="Int32" />
+    <Property Name="OccupationID" Type="Int32" />
+    <Property Name="BranchID" Type="Int32" />
+    <NavigationProperty Name="Achievements" Relationship="MemberMSModel.FK__Achieveme__Membe__31EC6D26" FromRole="Member" ToRole="Achievement" />
+    <NavigationProperty Name="Branch" Relationship="MemberMSModel.FK_Member_Branches" FromRole="Member" ToRole="Branch" />
+    <NavigationProperty Name="Designation" Relationship="MemberMSModel.FK__Member__Designat__15502E78" FromRole="Member" ToRole="Designation" />
+    <NavigationProperty Name="Donations" Relationship="MemberMSModel.FK_Donations_Member" FromRole="Member" ToRole="Donation" />
+    <NavigationProperty Name="Occupation" Relationship="MemberMSModel.FK_Member_Occupation" FromRole="Member" ToRole="Occupation" />
+    <NavigationProperty Name="Transactions" Relationship="MemberMSModel.FK_Transactions_Member" FromRole="Member" ToRole="Transaction" />
+    <NavigationProperty Name="Users" Relationship="MemberMSModel.FK_Users_Member" FromRole="Member" ToRole="User" />
+  </EntityType>
+  <EntityType Name="MembershipFee">
+    <Key>
+      <PropertyRef Name="MemberShipFeeID" />
+    </Key>
+    <Property Name="MemberShipFeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesignationID" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="OrganizationLevelID" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Designation" Relationship="MemberMSModel.FK__Membershi__Designation" FromRole="MembershipFee" ToRole="Designation" />
+    <NavigationProperty Name="OrganizationLevel" Relationship="MemberMSModel.FK_MembershipFee_OrganizationLevel" FromRole="MembershipFee" ToRole="OrganizationLevel" />
+  </EntityType>
+  <EntityType Name="Occupation">
+    <Key>
+      <PropertyRef Name="OccupationID" />
+    </Key>
+    <Property Name="OccupationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OccupationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Members" Relationship="MemberMSModel.FK_Member_Occupation" FromRole="Occupation" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="OrganizationLevel">
+    <Key>
+      <PropertyRef Name="OrganizationLevelID" />
+    </Key>
+    <Property Name="OrganizationLevelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrganizationLevelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Branches" Relationship="MemberMSModel.FK_Branches_OrganizationLevel" FromRole="OrganizationLevel" ToRole="Branch" />
+    <NavigationProperty Name="Fines" Relationship="MemberMSModel.FK_Fine_OrganizationLevel" FromRole="OrganizationLevel" ToRole="Fine" />
+    <NavigationProperty Name="MembershipFees" Relationship="MemberMSModel.FK_MembershipFee_OrganizationLevel" FromRole="OrganizationLevel" ToRole="MembershipFee" />
+  </EntityType>
+  <EntityType Name="OrganizationSchema">
+    <Key>
+      <PropertyRef Name="SchemaObjectID" />
+    </Key>
+    <Property Name="SchemaObjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SchemaObjectName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SchemaObjectValue" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionTypeID" Type="Int32" />
+    <Property Name="DonorID" Type="Int32" />
+    <Property Name="MemberID" Type="Int32" />
+    <Property Name="TransactionAmount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TransactionDate" Type="DateTime" Precision="0" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Donor" Relationship="MemberMSModel.FK_Transactions_DonorIndividual" FromRole="Transaction" ToRole="Donor" />
+    <NavigationProperty Name="Member" Relationship="MemberMSModel.FK_Transactions_Member" FromRole="Transaction" ToRole="Member" />
+    <NavigationProperty Name="TransactionType" Relationship="MemberMSModel.FK_Transactions_TransactionTypes" FromRole="Transaction" ToRole="TransactionType" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="TransactionTypeID" />
+    </Key>
+    <Property Name="TransactionTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Transactions" Relationship="MemberMSModel.FK_Transactions_TransactionTypes" FromRole="TransactionType" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Byte" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Member" Relationship="MemberMSModel.FK_Users_Member" FromRole="User" ToRole="Member" />
+  </EntityType>
+  <Association Name="FK__Achieveme__Award__30F848ED">
+    <End Type="MemberMSModel.Award" Role="Award" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Achievement" Role="Achievement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Award">
+        <PropertyRef Name="AwardID" />
+      </Principal>
+      <Dependent Role="Achievement">
+        <PropertyRef Name="AwardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Achieveme__Membe__31EC6D26">
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Achievement" Role="Achievement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="Achievement">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Branches_OrganizationLevel">
+    <End Type="MemberMSModel.OrganizationLevel" Role="OrganizationLevel" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Branch" Role="Branch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationLevel">
+        <PropertyRef Name="OrganizationLevelID" />
+      </Principal>
+      <Dependent Role="Branch">
+        <PropertyRef Name="OrganizationLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Member_Branches">
+    <End Type="MemberMSModel.Branch" Role="Branch" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="BranchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fine__Designation">
+    <End Type="MemberMSModel.Designation" Role="Designation" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Fine" Role="Fine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designation">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="Fine">
+        <PropertyRef Name="DesignationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Member__Designat__15502E78">
+    <End Type="MemberMSModel.Designation" Role="Designation" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designation">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="DesignationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Membershi__Designation">
+    <End Type="MemberMSModel.Designation" Role="Designation" Multiplicity="1" />
+    <End Type="MemberMSModel.MembershipFee" Role="MembershipFee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designation">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="MembershipFee">
+        <PropertyRef Name="DesignationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberPost_DesignationType">
+    <End Type="MemberMSModel.DesignationType" Role="DesignationType" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Designation" Role="Designation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DesignationType">
+        <PropertyRef Name="DesignationTypeID" />
+      </Principal>
+      <Dependent Role="Designation">
+        <PropertyRef Name="DesignationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Donations_DonationsTypes">
+    <End Type="MemberMSModel.DonationsType" Role="DonationsType" Multiplicity="1" />
+    <End Type="MemberMSModel.Donation" Role="Donation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonationsType">
+        <PropertyRef Name="DonationTypeID" />
+      </Principal>
+      <Dependent Role="Donation">
+        <PropertyRef Name="DonationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Donations_DonorIndividual">
+    <End Type="MemberMSModel.Donor" Role="Donor" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Donation" Role="Donation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donor">
+        <PropertyRef Name="DonorID" />
+      </Principal>
+      <Dependent Role="Donation">
+        <PropertyRef Name="DonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Donations_Member">
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Donation" Role="Donation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="Donation">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_DonorIndividual">
+    <End Type="MemberMSModel.Donor" Role="Donor" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Transaction" Role="Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donor">
+        <PropertyRef Name="DonorID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="DonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fine_OrganizationLevel">
+    <End Type="MemberMSModel.OrganizationLevel" Role="OrganizationLevel" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Fine" Role="Fine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationLevel">
+        <PropertyRef Name="OrganizationLevelID" />
+      </Principal>
+      <Dependent Role="Fine">
+        <PropertyRef Name="OrganizationLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Member_Occupation">
+    <End Type="MemberMSModel.Occupation" Role="Occupation" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Occupation">
+        <PropertyRef Name="OccupationID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="OccupationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_Member">
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Transaction" Role="Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Member">
+    <End Type="MemberMSModel.Member" Role="Member" Multiplicity="1" />
+    <End Type="MemberMSModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembershipFee_OrganizationLevel">
+    <End Type="MemberMSModel.OrganizationLevel" Role="OrganizationLevel" Multiplicity="1" />
+    <End Type="MemberMSModel.MembershipFee" Role="MembershipFee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationLevel">
+        <PropertyRef Name="OrganizationLevelID" />
+      </Principal>
+      <Dependent Role="MembershipFee">
+        <PropertyRef Name="OrganizationLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_TransactionTypes">
+    <End Type="MemberMSModel.TransactionType" Role="TransactionType" Multiplicity="0..1" />
+    <End Type="MemberMSModel.Transaction" Role="Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="TransactionTypeID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="TransactionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

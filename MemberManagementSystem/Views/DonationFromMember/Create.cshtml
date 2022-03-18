@@ -1,0 +1,71 @@
+﻿@model Model.DonationModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="pl-3">Add New Donation</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Donation Type </label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.DonationTypeID, (IEnumerable<SelectListItem>)ViewBag.donationTypes, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DonationTypeID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DonationDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DonationDescription, "", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DonationDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.DonationFrom, new { @Value = "From Member" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.DonorID)
+                @Html.ValidationMessageFor(model => model.DonorID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group" id="members">
+            <label class="control-label col-md-2">Members</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.MemberID, (IEnumerable<SelectListItem>)ViewBag.members, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MemberID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Remarks, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Remarks, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-secondary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
